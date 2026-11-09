@@ -1,0 +1,93 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-content">
+        <span class="badge">A step towards a greener future</span>
+        <h1>Dispose Medicines Safely.<br>Protect Our Planet.</h1>
+        <p>
+            Do you have expired or unused medicines at home?
+            MedWaste Map helps you understand safe disposal practices
+            and explore medicine collection options.
+        </p>
+
+        <a href="{{ url_for('disposal') }}" class="btn">
+            Explore Disposal Guide
+        </a>
+        <a href="{{ url_for('centres') }}" class="btn btn-outline">
+            Find Collection Options
+        </a>
+    </div>
+
+    <div class="hero-illustration">
+        <div class="hero-icon">💊🌱</div>
+        <h2>Small Actions, Big Impact</h2>
+        <p>Make responsible disposal a healthy habit.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-heading">
+        <h2>Explore MedWaste Map</h2>
+        <p>Everything you need to get started.</p>
+    </div>
+
+    <div class="card-grid">
+        <article class="card">
+            <div class="card-icon">♻️</div>
+            <h3>Safe Disposal Guide</h3>
+            <p>Learn the precautions for handling unwanted medicines.</p>
+            <a href="{{ url_for('disposal') }}">Read the guide →</a>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">📍</div>
+            <h3>Collection Options</h3>
+            <p>Explore nearby facilities and confirm their services.</p>
+            <a href="{{ url_for('centres') }}">Explore options →</a>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">📅</div>
+            <h3>Expiry Awareness</h3>
+            <p>Understand medicine expiry dates and safe storage.</p>
+            <a href="{{ url_for('expiry') }}">Learn more →</a>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">🧠</div>
+            <h3>Test Your Knowledge</h3>
+            <p>Answer a short quiz about medicine disposal.</p>
+            <a href="{{ url_for('quiz') }}">Start quiz →</a>
+        </article>
+    </div>
+</section>
+
+<section class="section green-section">
+    <div class="section-heading">
+        <h2>Why Is Safe Disposal Important?</h2>
+        <p>
+            Incorrect disposal can expose people, animals and the
+            environment to unwanted medicines.
+        </p>
+    </div>
+
+    <div class="three-columns">
+        <div>
+            <h3>🌊 Protect Water</h3>
+            <p>Prevent inappropriate disposal of medicines into drains.</p>
+        </div>
+        <div>
+            <h3>🏠 Protect Families</h3>
+            <p>Keep unwanted medicines away from children and pets.</p>
+        </div>
+        <div>
+            <h3>🌍 Protect Nature</h3>
+            <p>Choose suitable disposal routes recommended by authorities.</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

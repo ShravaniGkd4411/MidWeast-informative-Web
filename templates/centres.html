@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-banner">
+    <h1>Medicine Collection Locator</h1>
+    <p>Explore potential collection options in your area.</p>
+</section>
+
+<section class="section narrow">
+    <div class="locator-box">
+        <h2>Find Options Near You 📍</h2>
+        <p>Enter your city or area to search for potential facilities.</p>
+
+        <form id="locatorForm">
+            <label for="city">City or Area</label>
+            <input type="text" id="city"
+                   placeholder="Example: Pune, Maharashtra" required>
+            <button type="submit" class="btn">Search Locations</button>
+        </form>
+
+        <div id="locatorResults" class="results" aria-live="polite"></div>
+    </div>
+
+    <div class="notice">
+        <h3>Verification Notice</h3>
+        <p>
+            A pharmacy or healthcare facility is not automatically a
+            medicine collection centre. Contact the facility to confirm
+            whether it accepts unwanted medicines, which items it accepts,
+            and when the service is available.
+        </p>
+    </div>
+
+    <h2>Before Visiting a Collection Centre</h2>
+    <ul class="feature-list">
+        <li>Confirm that medicine collection is currently offered.</li>
+        <li>Ask which types of medicines are accepted.</li>
+        <li>Confirm the address and operating hours.</li>
+        <li>Check whether special handling is required.</li>
+    </ul>
+</section>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-banner">
+    <h1>Medicine Disposal Quiz</h1>
+    <p>Test your knowledge and learn safer habits.</p>
+</section>
+
+<section class="section narrow">
+    <div class="quiz-box">
+        <div class="quiz-progress" id="quizProgress">Question 1 of 5</div>
+        <h2 id="question">Loading question...</h2>
+        <div id="answers" class="answer-list"></div>
+        <p id="feedback" aria-live="polite"></p>
+
+        <button class="btn" id="nextQuestion" type="button" hidden>
+            Next Question
+        </button>
+
+        <div id="quizResult" hidden>
+            <h2>Quiz Completed! 🎉</h2>
+            <p id="scoreText"></p>
+            <button class="btn" id="restartQuiz" type="button">
+                Try Again
+            </button>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
